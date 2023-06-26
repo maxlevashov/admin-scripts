@@ -1,0 +1,8 @@
+ 	
+sudo chown -R my-username:_www .
+
+sudo find . -type f -exec chmod 664 {} \;
+sudo find . -type d -exec chmod 775 {} \;
+
+sudo chgrp -R _www storage bootstrap/cache
+sudo chmod -R ug+rwx storage bootstrap/cache
